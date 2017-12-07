@@ -24,7 +24,7 @@ ExecStart=/usr/bin/docker run --name %p \
   -e BIOSAMPLES_KEY=${BIOSAMPLES_KEY} \
   --publish 9191:9191 \
   --read-only \
-  --mount type=tmpfs,destination=/tmp,tmpfs-size=3000000000 \
+  --mount type=tmpfs,destination=/tmp \
   --net=ebisc \
   -v {{ volume.mount }}/media:/app/var/media:z \
   -v {{ volume.mount }}/static:/app/var/static:z \
